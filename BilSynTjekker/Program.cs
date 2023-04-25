@@ -1,4 +1,4 @@
-﻿// TypeGrouping branch
+﻿// Master branch
 
 using System;
 using System.Collections.Generic;
