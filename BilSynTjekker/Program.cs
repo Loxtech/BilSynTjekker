@@ -223,6 +223,7 @@ class MainClass
 
 
         Console.WriteLine("\nDateTime format change eksempel 2");
+
         string indputDato = "02.23.1971";
         string[] datoSplit = indputDato.Split('.');
         string dag = datoSplit[0];
