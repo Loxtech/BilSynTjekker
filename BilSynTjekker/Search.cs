@@ -8,14 +8,18 @@ namespace BilSynTjekker;
 
 internal class Search
 {
+    public string SomeText { get; set; }
     private readonly H1 _h1;
-    public Search(H1 h1)
-    { 
+    public Search(H1 h1, string someText)
+    {
         _h1 = h1;
     }
 
-    public string[] GetTeachers() 
+    public List<Person> GetTeachers() 
     {
-        return _h1.Teachers;    
+        Person? pMatched = _h1.Teachers.FirstOrDefault(a => a.FirstName == "Niels");
+        List<Person> p = _h1.Teachers.ToList();
+        p.Sort();
+        return p;    
     }
 }

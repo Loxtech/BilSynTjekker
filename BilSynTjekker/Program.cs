@@ -13,10 +13,11 @@ using Microsoft.Extensions.DependencyInjection;
 
 var serviceProvider = new ServiceCollection()
     .AddSingleton<H1>()
-    .AddSingleton<Search>()
+    .AddSingleton<Search>(new Search(new H1(), "Hello World!"))
     .BuildServiceProvider();
+
 Search search = serviceProvider.GetService<Search>()!;
-string[] teachers = search.GetTeachers();
+List<Person> teachers = search.GetTeachers();
 
 
 namespace BilSynTjekker

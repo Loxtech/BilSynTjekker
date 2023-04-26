@@ -6,18 +6,22 @@ using System.Threading.Tasks;
 
 namespace BilSynTjekker;
 
-internal class H1
+internal class H1 : IHovedForloeb
 {
-    public string[] Teachers { get; set; }
+    public Person[] Teachers { get; set; }
     public string[] Students { get; set; }
     public string[] Courses { get; set; }
-
-
     public H1() 
     {
-        Teachers = new string[] { "Niels Olesen", "Flemming Sørensen", "Peter Suni" };
+        Teachers = new Person[] 
+        { 
+          new Person(){FirstName = "Niels", LastName = "Olesen"},
+          new Person(){FirstName = "Flemming", LastName = "Sørensen"},
+          new Person(){FirstName = "Peter", LastName = "Suni"},
+        };
         Students = new string[0];
         Courses = new string[0];
     }
 
+    
 }
